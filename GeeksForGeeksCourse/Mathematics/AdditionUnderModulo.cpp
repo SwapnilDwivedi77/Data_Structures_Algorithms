@@ -18,7 +18,6 @@ int main() {
 
 	int T;
 	cin>>T;
-
 	while(T--) {
 		long long a;
 		long long b;
