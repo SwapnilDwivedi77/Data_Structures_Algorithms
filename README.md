@@ -2,7 +2,7 @@
 
 I will use this repository to store the solutions of problems which I will solve from various online judges. I primarily use C++ to solve the problems.
 
-## Online Judges for which I have kept solutions in this repo:
+### Online Judges for which I have kept solutions in this repo:
 
 ## 1. GeeksforGeeks
 
