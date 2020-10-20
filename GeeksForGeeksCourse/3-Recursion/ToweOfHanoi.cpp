@@ -15,19 +15,21 @@ public:
     // Function prints the steps and returns total number of steps
     long long toh(int N, int from, int to, int aux)
     {
+        long long moves = pow(2, N) - 1;
 
-        if (N == 1)
+        if (N > 0 && N < 2)
         {
-            cout << "move disk " << N << " from rod " << from << " to " << to << endl;
-            return 1;
+            cout << "move disk " << N << " from rod " << from << " to rod " << to << endl;
+
+            return moves;
         }
         toh(N - 1, from, aux, to);
 
-        cout << "move disk " << N << " from rod " << from << " to " << to << endl;
+        cout << "move disk " << N << " from rod " << from << " to rod " << to << endl;
 
         toh(N - 1, aux, to, from);
 
-        return pow(2, N) - 1;
+        return moves;
     }
 };
 
