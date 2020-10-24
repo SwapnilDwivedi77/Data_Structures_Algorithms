@@ -4,28 +4,24 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// utility function that reverses the array from a start index till end index
-void reverse(int arr[], int start, int end)
-{
-
-    for (int i = start, j = end; i < j; i++, j--)
-    {
-
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+void rotateArray(int arr[], int d, int n){
+    
+    int rotate[d];
+    
+    for(int i=0;i<d;i++){
+        
+        rotate[i]=arr[i];
+        
+    }
+    
+    for(int i=d;i<n;i++){
+        arr[i-d] = arr[i];
+    }
+    
+    for(int i=0;i<d;i++){
+        arr[n-d+i]=rotate[i];
     }
 }
-
-// Rotates the array in anti clockwise direction k times
-void rotateArray(int arr[], int k, int n)
-{
-
-    reverse(arr, n - k, n - 1); // reverse the last k elements of array
-    reverse(arr, 0, n - k - 1); // reverse first n-k elements of array
-    reverse(arr, 0, n - 1);     // reverse the entire array
-}
-
 // Driver code
 
 int main()
